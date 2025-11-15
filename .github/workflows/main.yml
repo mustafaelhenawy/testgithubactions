@@ -1,17 +1,19 @@
 name: frist_workflow
+
 on:
   push:
     branches:
       - main
+
 jobs:
-    frist_job:
-      runs-on: ubuntu:latest
-      steps:
-        - name: print hello message
-          run: echo "hello"
-        - name: checkout
-          uses: actions/checkout@v6-beta
-        - name: list files
-          run: ls -ll
-    
-        
+  frist_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print hello message
+        run: echo "hello"
+
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: list files
+        run: ls -ll
